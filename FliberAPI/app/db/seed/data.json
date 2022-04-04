@@ -1,0 +1,15 @@
+{
+    "model": "app.db.tables.Gender",
+    "data": [
+        {
+            "Ref_Id": 1,
+            "Name": "Male",
+            "Description": "Male"
+        },
+        {
+            "Ref_Id": 2,
+            "Name": "Female",
+            "Description": "Female"
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+RetirementAge  : int
+Inflation  : int
+LifeExp  : int
+RateOfReturn  : int
+HealthCareInflation  : int

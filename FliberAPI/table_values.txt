@@ -1,0 +1,156 @@
+Schema
+
+NetWorthHouseData
+
+    CategoryId : UUID
+    BucketId: UUID
+    Description: str
+    PropertyLocation: str
+    SOPLOP: str
+    RegistrationYear: datetime
+    TodaysValue: float
+    PlannedForLiquidity: str
+    TargetLiquidityYear: str
+    ExpectedPrice: float
+
+NetWorthVehicle
+
+    CategoryId : UUID
+    BucketId: UUID
+    Description: str
+    VehicleType: str
+    EstimatedValue: str
+
+NetWorthGold
+    CategoryId : UUID
+    BucketId: UUID
+    TodaysValue: float
+
+NetWorthOthers:
+    CategoryId : UUID
+    BucketId: UUID
+    AssetName: str
+    TodaysValue: float
+    PlannedForLiquidity: str
+    TargetLiquidityYear: datetime
+    ExpectedPrice: str
+
+NetWorthBankDeposit
+    CategoryId : UUID
+    BucketId: UUID
+    AccountNumber: string
+    BankName: str
+    CurrentBalance: float
+
+NetWorthFixedDeposit
+    CategoryId : UUID
+    BucketId: UUID
+    AccountNumber: str
+    MaturityDate: datetime
+    PrincipalAmount: float
+    MaturityAmount: float
+
+NetWorthInvestment
+    CategoryId : UUID
+    BucketId: UUID
+    AccountNumber: str
+    StartDate: datetime
+    MaturityDate: datetime
+    PrincipalAmount: float
+    MaturityAmount: float
+
+
+NetWorthLifeInsurance
+    CategoryId : UUID
+    BucketId: UUID
+    PolicyProvider: str
+    SchemaName: str
+    PolicyNumber: str
+    PolicyType: str
+    StartDate: datetime
+    PolicyTerm: str
+    SumAssured: float
+    MaturityValue: float
+
+
+NetWorthOtherAssets
+    CategoryId : UUID
+    BucketId: UUID
+    AssetName: str
+    TodaysValue: float
+    PlannedForLiquidity: str
+    TargetLiquidityYear: datetime
+    ExpectedPrice: str
+
+
+NetWorthLoan
+    CategoryId : UUID
+    BucketId: UUID
+    LoanType: float
+    LenderName: str
+    StartYear: datetime
+    EndYear: datetime
+    OutStandingAmount: float
+
+
+NetWorthAnnuity
+    CategoryId : UUID
+    BucketId: UUID
+    SchemeName: str
+    AccountNumber: str
+    StartDate: datetime
+    SchemeType: UUID
+    Corpus: float
+    AnnuityIncome: float
+    Frequency: UUID
+    GrowthOfPension: float
+    AnnuityMaturity: datetime
+
+
+NetWorthIncome
+    CategoryId : UUID
+    BucketId: UUID
+    PensionAmount: float
+    Frequency: UUID
+    GrowthOfAmount: float
+
+
+NetWorthRentalIncome
+    CategoryId : UUIDF
+    BucketId: UUID
+    Property: str
+    RentalInflation: float
+    RentalIncomePerYear: datetime
+
+
+NetWorthBusinessData
+    CategoryId : UUID
+    BucketId: UUID
+    Description: str
+    yearlyAmount: float
+
+
+NetWorthIncome
+    CategoryId : UUID
+    BucketId: UUID
+    Instrument: str
+    InterestPerYear: float
+
+
+NetWorthOthers
+    CategoryId : UUID
+    BucketId: UUID
+    Description: str
+    Frequency: UUID
+    Duration: datetime
+    Amount: float
+
+
+NetWorthStocks
+    AssetName: str
+    BucketId: UUID
+    TodaysValue: float
+    PlannedForLiquidityFlag: str
+    TargetLiquidYear: datetime
+    ExpectedPrice: float
+

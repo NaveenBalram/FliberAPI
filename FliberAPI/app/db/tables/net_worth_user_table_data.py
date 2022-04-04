@@ -1,0 +1,57 @@
+from sqlalchemy import Column, String, Float, TIMESTAMP, func, text, Boolean
+from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy.sql.schema import ForeignKey
+
+from app.db.base_class import Base
+
+
+class NetWorthUserTableData(Base):
+    __tablename__ = "NetWorthUserTableData"
+
+    UserId = Column(UUID(as_uuid=True), ForeignKey("User.Id"))
+    CategoryId = Column(UUID(as_uuid=True), ForeignKey("NetWorthCategoryData.Id"))
+    InvestmentBucketId = Column(UUID(as_uuid=True), ForeignKey("NetWorthBucketData.Id"))
+    Description = Column(String, nullable=True)
+    PropertyLocation = Column(String, nullable=True)
+    SopLop = Column(String, nullable=True)
+    RegistrationYear = Column(TIMESTAMP(timezone=True), nullable=True, server_default=text("now()"))
+    TodaysValue = Column(Float, nullable=True)
+    PlannedForLiquidityFlag = Column(Boolean, nullable=True)
+    TargetLiquidityYear = Column(TIMESTAMP(timezone=True), nullable=True, server_default=text("now()"))
+    ExpectedPrice = Column(Float, nullable=True)
+    VehicleType = Column(UUID(as_uuid=True), ForeignKey("NetWorthBucketData.Id"), nullable=True)
+    EstimatedValue = Column(Float, nullable=True)
+    AssetName = Column(String, nullable=True)
+    AccountNumber = Column(String, nullable=True)
+    CurrentBalance = Column(Float, nullable=True)
+    FdStartDate = Column(TIMESTAMP(timezone=True), nullable=True, server_default=text("now()"))
+    MaturityDate = Column(TIMESTAMP(timezone=True), nullable=True, server_default=text("now()"))
+    PrincipalAmount = Column(Float, nullable=True)
+    MaturityAmount = Column(Float, nullable=True)
+    SchemeName = Column(String, nullable=True)
+    PolicyNumber = Column(String, nullable=True)
+    PolicyType = Column(String, nullable=True)
+    PolicyTerm = Column(String, nullable=True)
+    SumAssured = Column(Float, nullable=True)
+    MaturityValue = Column(Float, nullable=True)
+    LoanType = Column(UUID(as_uuid=True), ForeignKey("NetWorthLoanTypeData.Id"), nullable=True)
+    Lender = Column(String, nullable=True)
+    OutStandingAmount = Column(Float, nullable=True)
+    SchemeType = Column(UUID(as_uuid=True), ForeignKey("NetWorthSchemeTypeData.Id"), nullable=True)
+    Corpus = Column(Float, nullable=True)
+    AnnunityIncome = Column(Float, nullable=True)
+    FrequencyId = Column(UUID(as_uuid=True), ForeignKey("NetWorthFrequencyTypeData.Id"))
+    GrowthOfPension = Column(Float, nullable=True)
+    AnnunityMaturity = Column(String, nullable=True)
+    PensionAmount = Column(Float, nullable=True)
+    GrowthAmount = Column(Float, nullable=True)
+    Property = Column(String, nullable=True)
+    RentalInformation = Column(String, nullable=True)
+    YearlyAmount = Column(String, nullable=True)
+    Instrument = Column(String, nullable=True)
+    InterestPerYearOrDividend = Column(Float, nullable=True)
+    TargetDate = Column(Float, nullable=True)
+    Amount = Column(Float, nullable=True)
+    CreatedOn = Column(TIMESTAMP(timezone=True), nullable=True, server_default=text("now()"))
+    UpdatedOn = Column(TIMESTAMP(timezone=True), nullable=True, server_default=func.now())
+    IsDeleted = Column(Boolean, nullable=True)
